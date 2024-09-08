@@ -1,0 +1,9 @@
+Flask
+Flask-SocketIO
+Flask-JWT-Extended
+scikit-learn
+pandas
+numpy
+psycopg2-binary
+SQLAlchemy
+joblib
