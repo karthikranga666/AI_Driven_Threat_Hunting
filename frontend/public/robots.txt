@@ -1,0 +1,48 @@
+# Global directives for all crawlers
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /search-results/
+Disallow: /user-settings/
+Disallow: /*?*         # Block URLs with query parameters
+Disallow: /temp/       # Block temporary or draft content
+Disallow: /api/        # Block internal API calls
+Disallow: /backend/    # Block backend routes
+Disallow: /scripts/    # Block JavaScript folder
+Disallow: /cgi-bin/    # Block CGI scripts folder
+
+# Specific bot control
+User-agent: Googlebot
+Allow: /
+Disallow: /search-results/
+Disallow: /temp/
+Crawl-delay: 10        # Introduces a 10-second delay between requests for Googlebot
+
+User-agent: Bingbot
+Allow: /
+Disallow: /search-results/
+Crawl-delay: 15        # Introduces a 15-second delay between requests for Bingbot
+
+# Sitemap location
+Sitemap: https://www.example.com/sitemap.xml
+
+# Prevent image indexing
+User-agent: Googlebot-Image
+Disallow: /images/private/
+Disallow: /images/temp/
+
+# Block specific crawlers entirely
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+# Additional directives
+User-agent: *
+Allow: /public/
+Allow: /blog/
+Allow: /about/
